@@ -43,6 +43,7 @@ uint8_t* substraction(uint8_t number1[1024],uint8_t number2[1024], int *current_
         int number2_copy = number2[i];
 			
         if(number1_copy < number2_copy) {
+			
         borrow = 1;
         number1_copy += 10;
 			
@@ -50,8 +51,10 @@ uint8_t* substraction(uint8_t number1[1024],uint8_t number2[1024], int *current_
 			
         borrow = 0;
 			
-			}
+		}
+			
         result[i]= number1_copy - number2_copy;
+			
         }
 
         return result;
